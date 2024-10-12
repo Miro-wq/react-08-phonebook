@@ -1,0 +1,12 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Dancing Script;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: Dancing Script;
+    font-size: 30px;
+    text-decoration: underline;
+}

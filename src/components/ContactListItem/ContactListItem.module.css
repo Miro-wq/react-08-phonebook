@@ -1,0 +1,32 @@
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Dancing Script;
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+    gap: 5px;
+}
+
+.deleteBtn {
+    background-color: #fecc4a;
+    border: 2px solid black;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .deleteBtn:hover {
+    background-color: #000000;
+    color: #fecc4a;
+  }
