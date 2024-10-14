@@ -8,7 +8,9 @@ export const register = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${API_URL}/users/signup`, userData);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+      axios.defaults.headers.common[
+        'Authorization'
+      ] = `Bearer ${response.data.token}`;
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -21,7 +23,9 @@ export const login = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${API_URL}/users/login`, userData);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+      axios.defaults.headers.common[
+        'Authorization'
+      ] = `Bearer ${response.data.token}`;
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -55,8 +59,8 @@ const authSlice = createSlice({
       state.token = action.payload.token;
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(register.pending, (state) => {
+  extraReducers: builder => {
+    builder.addCase(register.pending, state => {
       state.isLoading = true;
       state.error = null;
     });
@@ -70,7 +74,7 @@ const authSlice = createSlice({
       state.error = action.payload;
     });
 
-    builder.addCase(login.pending, (state) => {
+    builder.addCase(login.pending, state => {
       state.isLoading = true;
       state.error = null;
     });
@@ -84,7 +88,7 @@ const authSlice = createSlice({
       state.error = action.payload;
     });
 
-    builder.addCase(logout.fulfilled, (state) => {
+    builder.addCase(logout.fulfilled, state => {
       state.user = null;
       state.token = null;
     });

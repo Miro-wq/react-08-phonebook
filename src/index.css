@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import 'normalize.css';
 
 body {
   margin: 0;
@@ -10,11 +10,10 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  background-image: url(/public/bodybackground.png);
+  background-image: url(../assets/images/background2.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -24,4 +23,8 @@ code {
 a {
   text-decoration: none;
   color: aliceblue;
+}
+
+p {
+  color: #fff;
 }

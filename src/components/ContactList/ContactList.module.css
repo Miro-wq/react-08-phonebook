@@ -1,0 +1,13 @@
+.contactList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  background-color: rgb(167 167 167 / 34%);
+  padding: 15px;
+  max-height: 25em;
+  height: 25em;
+  overflow-y: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}

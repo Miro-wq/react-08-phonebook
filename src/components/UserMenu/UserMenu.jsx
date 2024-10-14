@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/authSlice';
+import styles from './UserMenu.module.css';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -11,9 +12,11 @@ const UserMenu = () => {
   };
 
   return (
-    <div className="user-menu">
+    <div className={styles.userMenu}>
       <p>Logged in as: {email}</p>
-      <button onClick={handleLogout}>Logout</button>
+      <button className={styles.logoutBtn} onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };

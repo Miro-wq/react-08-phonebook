@@ -26,10 +26,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <label className={styles.label}>
+    <form onSubmit={handleSubmit} className={styles.contactForm}>
+      <label className={styles.contactLabel}>
         Name:
         <input
+          className={styles.contactInput}
           type="text"
           name="name"
           pattern="^[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*$"
@@ -39,9 +40,10 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </label>
-      <label className={styles.label}>
+      <label className={styles.contactLabel}>
         Number:
         <input
+          className={styles.contactInput}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -51,7 +53,9 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </label>
-      <button type="submit" className={styles.addContact}>Add Contact</button>
+      <button type="submit" className={styles.addContact}>
+        Add Contact
+      </button>
     </form>
   );
 };

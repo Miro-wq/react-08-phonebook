@@ -43,7 +43,10 @@ export const updateContact = createAsyncThunk(
   'contacts/updateContact',
   async ({ contactId, updatedData }, thunkAPI) => {
     try {
-      const response = await axios.patch(`${API_URL}/${contactId}`, updatedData);
+      const response = await axios.patch(
+        `${API_URL}/${contactId}`,
+        updatedData
+      );
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -66,9 +69,9 @@ const contactsSlice = createSlice({
       state.filter = action.payload;
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(fetchContacts.pending, (state) => {
+      .addCase(fetchContacts.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -80,7 +83,7 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(addContact.pending, (state) => {
+      .addCase(addContact.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -92,28 +95,28 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(deleteContact.pending, (state) => {
+      .addCase(deleteContact.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.items = state.items.filter(
-          (contact) => contact.id !== action.payload
+          contact => contact.id !== action.payload
         );
       })
       .addCase(deleteContact.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(updateContact.pending, (state) => {
+      .addCase(updateContact.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
       .addCase(updateContact.fulfilled, (state, action) => {
         state.isLoading = false;
         const index = state.items.findIndex(
-          (contact) => contact.id === action.payload.id
+          contact => contact.id === action.payload.id
         );
         if (index !== -1) {
           state.items[index] = action.payload;

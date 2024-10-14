@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import ContactListItem from '../ContactListItem/ContactListItem';
 import { deleteContact } from '../redux/contactSlice';
+import styles from './ContactList.module.css';
 
 const ContactList = ({ contacts }) => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const ContactList = ({ contacts }) => {
   };
 
   return (
-    <ul>
+    <ul className={styles.contactList}>
       {contacts.map(contact => (
         <ContactListItem
           key={contact.id}
