@@ -1,7 +1,6 @@
 
 .form {
     display: flex;
-    flex-direction: column;
     gap: 15px;
     margin-top: 30px;
 }
@@ -15,7 +14,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 24px;
-    font-family: Dancing Script;
     margin: 8px 2px;
     border-radius: 5px;
     cursor: pointer;
@@ -28,7 +26,6 @@
   
   input[type="text"],
   input[type="tel"] {
-     width: 100%;
     padding: 5px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -38,7 +35,6 @@
     font-size: 16px;
     display: flex;
     flex-direction: column;
-    font-family: Dancing Script;
   }
   
   input[type="text"]:focus,
@@ -48,6 +44,5 @@
   }
   
   .label {
-    font-family: Dancing Script;
     font-size: 20px;
   }
