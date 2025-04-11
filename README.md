@@ -1,13 +1,10 @@
-# ✨ Contact book, final code refactoring, implementing login and user authentication. ✨
+#  Contact book, final code refactoring, implementing login and user authentication. 
 
-## 🛠 Tools used
+## Description 
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,redux,npm,webpack,vscode)](https://skillicons.dev)
-
-![Description](https://img.shields.io/badge/Description-purple?style=for-the-badge)
 >The project is the final part of code refactoring for the phonebook application with user authentication, showcasing advanced React concepts such as state management, form handling, and integration with a backend for user registration, login, and data persistence.
 
-![Features](https://img.shields.io/badge/Features-purple?style=for-the-badge)
+## Features 
 
 - **User Authentication:** Supports user registration, login, and logout functionality.
 - **Personalized Phonebook:** Users can securely add, edit, and delete their contacts.
@@ -15,7 +12,7 @@
 - **Persistent Data:** Contacts are stored and retrieved from a backend service.
 - **Routing:** Implements private and public routes for authenticated and unauthenticated users.
 
-![Key Learning Objectives:](https://img.shields.io/badge/Key%20Learning%20Objectives-purple?style=for-the-badge)
+## Key Objectives: 
 
 - **State Management**: Manage and update state in React, particularly how to structure state to store multiple properties and handle user inputs in a controlled manner.
 - **Componentization**: The importance of breaking down an application into smaller, reusable components became evident. This approach not only simplifies development but also makes the codebase easier to maintain and scale.
